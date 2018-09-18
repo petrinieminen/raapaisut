@@ -1,8 +1,7 @@
 
 def read_file():
-    file = open(r"", "r")
     lista = dict()
-    with file:
+    with open(r"tähän tiedostonimi.txt", "r") as file:
         lines = file.readlines()
         for i in range(0, len(lines)):
             line = lines[i]
@@ -21,8 +20,6 @@ def read_file():
         formatted = k +"\t" + v + "\t" + "{startpossa}".format(startpossa=startpossa)
         print(formatted)
         startpossa += int(float(v))
-
-    file.close()
 
 
 def main():
